@@ -1,0 +1,43 @@
+
+
+
+#grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px; /* Adjust as needed for spacing between divs */
+  width: 420px;
+  flex-direction: row;
+}
+
+/* Apply styles to each square grid item */
+.grid-item {
+  width: calc(25% - 4px); /* Adjust as needed for item width and gap */
+  height: calc(25% - 4px); /* Set the height to 25% of the container width */
+  padding-bottom: calc(25% - 4px); /* Set the padding-bottom to create square divs */
+  background-color: lightblue; /* Adjust as needed for background color */
+  border: 1px solid #333; /* Optional: Add border for better visibility */
+}
+/*
+.flex-container {
+  border: 1px solid #fff;
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+  }
+  
+  // this selector selects all divs inside of .flex-container 
+  .flex-container div {
+    background: peachpuff;
+    border: 4px solid brown;
+    width: 100px;
+    height: 100px;
+    flex: 1;
+  }
+*/
+
+  /*
+  border: 1px solid #fff;
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+  */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        :root {
+        --grid-cols: 1;
+        --grid-rows: 1;
+        }
+
+        #container {
+        display: grid;
+        grid-gap: 1em;
+        grid-template-rows: repeat(var(--grid-rows), 1fr);
+        grid-template-columns: repeat(var(--grid-cols), 1fr);
+        }
+
+        .grid-item {
+        width: calc(25% - 4px);
+        height: calc(25% - 4px);
+        padding-bottom: calc(25% - 4px);
+        background-color: lightblue;
+        /*border: 1px solid #333; /**/
+
+        padding: 1em;/**/
+        border: 0px solid #0c0c0c;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container"></div>
+
+
+    <!-- <script src = "script.js"></script> -->
+
+
+    <script> 
+/*
+        document.addEventListener('DOMContentLoaded', function() {
+            const grid = document.querySelector('.grid-container');
+
+            // Create a 16x16 grid
+            for (let i = 0; i < 16; i++) {
+                for (let j = 0; j < 16; j++) {
+                    const gridItem = document.createElement('div');
+                    gridItem.classList.add('grid-item');
+                    grid.appendChild(gridItem);
+                }
+            }
+
+            console.log('Number of grid items:', grid.children.length);
+        });
+*/
+
+        const container = document.getElementById("container");
+
+        function makeRows(rows, cols) {
+        container.style.setProperty('--grid-rows', rows);
+        container.style.setProperty('--grid-cols', cols);
+        for (c = 0; c < (rows * cols); c++) {
+            let cell = document.createElement("div");
+            cell.innerText = (c + 1);
+            container.appendChild(cell).className = "grid-item";
+        };
+        };
+
+        makeRows(16, 16);
+    </script>
+
+
+</body>
+</html>
